@@ -43,7 +43,9 @@ namespace SwashbucklePkce.OpenApi
                         TokenUrl = new Uri(discoveryDocument.TokenEndpoint),
                         Scopes = new Dictionary<string, string>
                         {
-                            { _settings.Security.Jwt.Audience , "Balea Server HTTP Api" }
+                            // { _settings.Security.Jwt.Audience , "Balea Server HTTP Api" }
+                            { "openid", "" },
+                            { "profile", "" }
                         },
                     }
                 },
